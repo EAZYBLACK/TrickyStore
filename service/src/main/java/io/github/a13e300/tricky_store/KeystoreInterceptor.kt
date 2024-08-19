@@ -5,9 +5,9 @@ import android.hardware.security.keymint.SecurityLevel
 import android.os.IBinder
 import android.os.Parcel
 import android.os.ServiceManager
-import android.system.keystore2.IKeystoreService
-import android.system.keystore2.KeyDescriptor
-import android.system.keystore2.KeyEntryResponse
+import android.system.keystore.IKeystoreService
+import android.system.keystore.KeyDescriptor
+import android.system.keystore.KeyEntryResponse
 import io.github.a13e300.tricky_store.binder.BinderInterceptor
 import io.github.a13e300.tricky_store.keystore.CertHack
 import io.github.a13e300.tricky_store.keystore.Utils
@@ -94,7 +94,7 @@ object KeystoreInterceptor : BinderInterceptor() {
 
     fun tryRunKeystoreInterceptor(): Boolean {
         Logger.i("trying to register keystore interceptor ($triedCount) ...")
-        val b = ServiceManager.getService("android.system.keystore2.IKeystoreService/default") ?: return false
+        val b = ServiceManager.getService("android.system.keystore.IKeystoreService/default") ?: return false
         val bd = getBinderBackdoor(b)
         if (bd == null) {
             // no binder hook, try inject
@@ -108,7 +108,7 @@ object KeystoreInterceptor : BinderInterceptor() {
                     arrayOf(
                         "/system/bin/sh",
                         "-c",
-                        "exec ./inject `pidof keystore2` libtricky_store.so entry"
+                        "exec ./inject `pidof keystore` libtricky_store.so entry"
                     )
                 )
                 // logD(p.inputStream.readBytes().decodeToString())

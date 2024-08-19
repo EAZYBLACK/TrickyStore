@@ -6,7 +6,7 @@ import android.hardware.security.keymint.EcCurve;
 import android.hardware.security.keymint.KeyParameter;
 import android.hardware.security.keymint.Tag;
 import android.security.keystore.KeyProperties;
-import android.system.keystore2.KeyDescriptor;
+import android.system.keystore.KeyDescriptor;
 import android.util.Pair;
 
 import androidx.annotation.Nullable;

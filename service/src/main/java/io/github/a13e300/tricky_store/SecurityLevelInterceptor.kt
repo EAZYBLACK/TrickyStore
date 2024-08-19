@@ -5,11 +5,11 @@ import android.hardware.security.keymint.KeyParameterValue
 import android.hardware.security.keymint.Tag
 import android.os.IBinder
 import android.os.Parcel
-import android.system.keystore2.Authorization
-import android.system.keystore2.IKeystoreSecurityLevel
-import android.system.keystore2.KeyDescriptor
-import android.system.keystore2.KeyEntryResponse
-import android.system.keystore2.KeyMetadata
+import android.system.keystore.Authorization
+import android.system.keystore.IKeystoreSecurityLevel
+import android.system.keystore.KeyDescriptor
+import android.system.keystore.KeyEntryResponse
+import android.system.keystore.KeyMetadata
 import io.github.a13e300.tricky_store.binder.BinderInterceptor
 import io.github.a13e300.tricky_store.keystore.CertHack
 import io.github.a13e300.tricky_store.keystore.CertHack.KeyGenParameters

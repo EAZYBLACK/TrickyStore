@@ -1,9 +1,9 @@
-package android.system.keystore2;
+package android.system.keystore;
 
 import android.os.IBinder;
 
 public interface IKeystoreService {
-    String DESCRIPTOR = "android.system.keystore2.IKeystoreService";
+    String DESCRIPTOR = "android.system.keystore.IKeystoreService";
 
     IKeystoreSecurityLevel getSecurityLevel(int securityLevel);
 

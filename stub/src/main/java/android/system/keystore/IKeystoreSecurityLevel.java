@@ -1,4 +1,4 @@
-package android.system.keystore2;
+package android.system.keystore;
 
 import android.hardware.security.keymint.KeyParameter;
 import android.os.IBinder;
@@ -7,7 +7,7 @@ import android.os.IInterface;
 import androidx.annotation.Nullable;
 
 public interface IKeystoreSecurityLevel extends IInterface {
-    String DESCRIPTOR = "android.system.keystore2.IKeystoreSecurityLevel";
+    String DESCRIPTOR = "android.system.keystore.IKeystoreSecurityLevel";
 
     KeyMetadata generateKey(KeyDescriptor key, @Nullable KeyDescriptor attestationKey,
                             KeyParameter[] params, int flags, byte[] entropy);

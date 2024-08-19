@@ -1,7 +1,7 @@
 package io.github.a13e300.tricky_store.keystore;
 
-import android.system.keystore2.KeyEntryResponse;
-import android.system.keystore2.KeyMetadata;
+import android.system.keystore.KeyEntryResponse;
+import android.system.keystore.KeyMetadata;
 import android.util.Base64;
 import android.util.Log;
 

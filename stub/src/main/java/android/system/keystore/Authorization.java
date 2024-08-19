@@ -1,4 +1,4 @@
-package android.system.keystore2;
+package android.system.keystore;
 
 import android.hardware.security.keymint.KeyParameter;
 
